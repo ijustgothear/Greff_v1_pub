@@ -1,0 +1,9 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Greff_v1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Source.cpp
+C:\Users\isaacnelson\source\repos\Greff_v1-master (1)\Greff_v1-master\Greff_v1\Source.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\isaacnelson\source\repos\Greff_v1-master (1)\Greff_v1-master\Greff_v1\gamestate.h(82,19): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\isaacnelson\source\repos\Greff_v1-master (1)\Greff_v1-master\Greff_v1\gamestate.h(152,3): warning C4102: 'continueroom': unreferenced label
+C:\Users\isaacnelson\source\repos\Greff_v1-master (1)\Greff_v1-master\Greff_v1\gamestate.h(225,35): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\isaacnelson\source\repos\Greff_v1-master (1)\Greff_v1-master\Greff_v1\gamestate.h(267,35): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\isaacnelson\source\repos\Greff_v1-master (1)\Greff_v1-master\Greff_v1\gamestate.h(277,35): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Greff_v1.vcxproj -> C:\Users\isaacnelson\source\repos\Greff_v1-master (1)\Greff_v1-master\x64\Debug\Greff_v1.1.exe

@@ -1,0 +1,44 @@
+/Bedroom:bedroom
+>bed:you try to sleep but strane withdrall keeps you up
+>desktop:you read the screen:&Computer_screen
+>bag:?clothes,clothes:^clothes:you grab a change of clothes
+>hall:you leave your room:@Hall
+*clothes:you should do some londry soon
+
+/Hall:Hall
+>Door:you return to your room:@Bedroom
+>Juntion:@Juntion
+>Cafe:@Cafe
+
+/Juntion:Juntion
+>hall:@Hall
+>bathroom:@Bathroom
+>OP Deck:@OP Deck
+
+/Bathroom:Bathroom
+>shower:?clothes,change:you need freash clothes
+>leave:you exit the bathroom:@Juntion
+*change:&shower:?_shower,showered:^_shower:you feel refreashed:+Cafe,note:+OP Deck,Alex
+*showered:you just need a little longer...
+*note:&note
+*Alex:@Alex
+
+
+/OP Deck:OP Deck
+>Juntion:@Juntion
+
+/Cafe:Cafe
+>hall:@Hall
+>window:&cafe veiw
+
+/Alex:Alex
+>"you got preped fast.":&Alex_o:[Alex] Strane withdral must be messing with your sence of time:!
+>"are we ready to go?":&Alex_o:[Alex] shure thing.:+OP Deck,Shutle:-Alex,"are we ready to go?":!:@Alex
+>leave:@OP Deck
+*Shutle:@Shutle
+
+/Shutle:Shutle
+>leave:@OP Deck
+
+/end_screen:end_screen
+>k:

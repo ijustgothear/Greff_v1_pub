@@ -1,0 +1,52 @@
+--confinger file
+The configure file ( configure.txt ) tells the game what files to build it's self with.
+
+
+	colaline.txt	;list of txt files contaning chaptets, each file seperated on it's own line* 
+	#				;brake point, tells the configurere to switch to reading art files
+	art.txt			;list of files contaning art, each file seperated on it's own line* 
+	#				;aditional brake point, not nessisery, but frees up the rest of the configer file.
+
+*multipule chapters and art files are not currently supported
+
+--chapter files
+chapter files contane the Rooms and objects you can interact with
+
+	/Bedroom:Bedroom												;rooms are created with '/' followed by it's name then ':' followed by it's defult art
+	>bed:you try to sleep but strane withdrall keeps you up			;defalut objects are crated '>'  followed by there name, then a list of actions, each action seperated with ':'
+	>desktop:you read the screen:&Computer_screen					;
+	>bag:?clothes,clothes:^clothes:you grab a change of clothes		;
+	>hall:you leave your room:@Hall									;
+	*clothes:you should do some londry soon							;hiden actions are created with '*'; they are used both as refrence for adding objects [ + ] duing gameplay as well as to branch conditionals [ ? ]
+
+-actions
+actions are the sytem that determan what happens when you interact with an object during gameplay, most actions are decared by a symble, followed by datta indicating what will happen
+
+	no spechal caritcter:				;the text will be printed to the screen
+	&[art]:								;will draw the indicated [art]
+	?[condition],[hiddenobject]:		;if the invantory contains the condition it will stop interacing with the current object and start intracting will [hiddenobject]
+	^[item]:							;adds [item] to invantory
+	!:									;dose a brake, the player will be prompted to enter any caricter to continue
+	@[room]:							;will chage current room to room
+	-[room],[object]:					;will remove object from [room]
+	+[room],[hiddenobject]:				;will add [hiddenobject] to [room]
+
+--art files
+files contaning text art, uesed as game graphics
+
+	cover:13									;name of Art, followed by ':' and the number of lines constituing the peice
+	=======================================		;1 lines of the art
+	     .    <GREEF: LOST WORLD>       .		;2
+	          .                   +				;3
+	+                .							;4
+	     .              ..--'''--..				;5
+	    []"==""===----.._-~~-  \   \   *		;6
+	    []==     _ o ___[]-.  -~@~-.'			;7
+	    []_==__=------=='~~-\       |    .		;8
+	                  . \-~~-  -~@~-.			;9
+	    +          *   \ //-~~-    /  +			;10
+	          .         ''--___--''				;11
+	  +                                   .		;12
+	=======================================		;13, the last line of this peice
+
+
